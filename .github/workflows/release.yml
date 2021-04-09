@@ -1,0 +1,14 @@
+on:
+  release:
+    types: [published]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Sha
+        run: echo ${GITHUB_SHA}
+      - name: Ref
+        run: echo ${GITHUB_REF}
+
